@@ -1,0 +1,105 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== FOND BLEU CLAIR ===== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cfe9f9, #a7d8f5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animation générale */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===== TITRE ===== */
+h1 {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    color: #1f3b57;
+    position: relative;
+    animation: slideDown 1s ease;
+}
+
+/* Ligne décorative sous le titre */
+h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #1f3b57;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Animation titre */
+@keyframes slideDown {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== MENU VERTICAL ===== */
+a {
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin: 12px 0;
+    padding: 14px;
+    text-decoration: none;
+    color: #1f3b57;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+    /* Animation descendante */
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: dropDown 0.8s ease forwards;
+}
+
+/* Animation progressive (effet menu déroulant) */
+a:nth-of-type(1) { animation-delay: 0.3s; }
+a:nth-of-type(2) { animation-delay: 0.5s; }
+a:nth-of-type(3) { animation-delay: 0.7s; }
+a:nth-of-type(4) { animation-delay: 0.9s; }
+a:nth-of-type(5) { animation-delay: 1.1s; }
+a:nth-of-type(6) { animation-delay: 1.3s; }
+
+@keyframes dropDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== HOVER ELEGANT ===== */
+a:hover {
+    background: white;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+
+
