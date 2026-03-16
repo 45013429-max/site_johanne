@@ -1,0 +1,85 @@
+/* Style global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Conteneur pour menu + contenu */
+.container {
+    display: flex;
+    height: calc(100vh - 80px); /* hauteur de l'écran moins le header */
+}
+
+/* Menu à gauche */
+.menu {
+    width: 220px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu h2 {
+    color: #fff;
+    margin-top: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.menu ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* Fenêtre de contenu */
+.content {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive */
+@media(max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        height: 500px;
+    }
+}

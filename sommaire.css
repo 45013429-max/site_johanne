@@ -1,0 +1,17 @@
+/* Centrer le titre et ajouter une couleur + animation */
+h1 {
+    color: #0077b6;   /* Couleur du texte */
+    text-align: center;
+    font-size: 2.5em;
+    animation: glow 2s infinite alternate;
+}
+
+/* Animation de lueur autour du texte */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #0077b6, 0 0 10px #0077b6, 0 0 15px #0077b6;
+    }
+    to {
+        text-shadow: 0 0 20px #00b4d8, 0 0 30px #00b4d8, 0 0 40px #00b4d8;
+    }
+}
